@@ -105,6 +105,60 @@ Where θ (theta) and φ (phi) are the spherical coordinates:
 
 **Superposition Visualization**: Points on the equator represent equal superpositions with different phases.
 
+## Measuring a Qubit: Collapsing the Quantum State
+
+Measurement is one of the most profound aspects of quantum mechanics — the act of extracting information from a qubit fundamentally and irreversibly changes it.
+
+### What Happens During Measurement
+
+When a qubit in state |ψ⟩ = α|0⟩ + β|1⟩ is measured in the computational basis:
+
+1. **Probabilistic outcome**: You get either 0 (with probability |α|²) or 1 (with probability |β|²)
+2. **State collapse**: The qubit's superposition is destroyed — it snaps to whichever state was observed
+3. **Irreversibility**: The original amplitudes α and β are gone forever. You cannot reconstruct them from a single measurement
+4. **Repeatability**: Measuring the same qubit again immediately gives the same result (it's now in a definite state)
+
+### The Born Rule
+
+The **Born rule** is the bridge between quantum amplitudes and real-world probabilities:
+
+- **P(0) = |α|²** — probability of measuring |0⟩
+- **P(1) = |β|²** — probability of measuring |1⟩
+- **Normalization**: |α|² + |β|² = 1 (probabilities must sum to 1)
+
+For example, a qubit in state (√3/2)|0⟩ + (1/2)|1⟩ gives:
+- 75% chance of measuring 0
+- 25% chance of measuring 1
+
+### Measurement Bases
+
+You're not limited to measuring in the |0⟩/|1⟩ basis. Any pair of orthogonal states defines a valid measurement basis:
+
+- **Computational basis** (Z-basis): {|0⟩, |1⟩} — the standard, most common
+- **Hadamard basis** (X-basis): {|+⟩, |−⟩} — measures superposition phase
+- **Y-basis**: {|+i⟩, |−i⟩} — measures circular polarization
+
+Choosing the right measurement basis is critical — the same qubit can give different information depending on how you measure it. This is why quantum algorithms carefully design their measurement strategy.
+
+### How Qubits Are Physically Measured
+
+The abstract "measurement" maps to concrete physical processes depending on the hardware:
+
+- **Superconducting qubits**: A microwave pulse probes the qubit's resonator. The resonator's frequency shifts depending on whether the qubit is in |0⟩ or |1⟩ (dispersive readout). The reflected signal reveals the state.
+- **Trapped ions**: A laser tuned to a specific transition causes the ion to fluoresce (glow) if it's in one state, and stay dark in the other. A camera or photodetector counts the photons.
+- **Photonic qubits**: Single-photon detectors (avalanche photodiodes or superconducting nanowire detectors) register whether a photon arrived in a particular path or polarization.
+- **Neutral atoms**: Similar to trapped ions — state-dependent fluorescence under laser illumination, captured by high-resolution imaging.
+
+**Common challenge across all platforms**: No measurement is perfect. Readout errors (1–5%) mean the detector sometimes reports the wrong state, which is why quantum algorithms run many shots and use statistical analysis.
+
+### Why Measurement Matters for Computation
+
+Measurement isn't just the "end" of a quantum computation — it's a strategic tool:
+
+- **Mid-circuit measurement**: Some algorithms measure certain qubits partway through, using the result to decide what gates to apply next (adaptive circuits)
+- **Measurement-based quantum computing**: An entire paradigm where computation is performed purely through sequential measurements on a pre-entangled cluster state
+- **Error correction**: Syndrome measurements detect errors without disturbing the encoded data (the key trick of quantum error correction)
+
 ## Why Qubits Change Everything
 
 The power of qubits comes not just from individual quantum behavior, but from how multiple qubits interact and scale.
