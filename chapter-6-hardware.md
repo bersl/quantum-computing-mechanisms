@@ -3,6 +3,8 @@
 
 Building a quantum computer is like building a time machine - the physics is sound, but the engineering is extraordinary. Multiple teams worldwide are pursuing different physical approaches, each with unique advantages and challenges.
 
+![Quantum hardware comparison](diagrams/hardware-comparison.png)
+
 ## Superconducting Qubits: The Silicon Valley Approach
 
 **Leaders**: IBM, Google, Rigetti, IQM

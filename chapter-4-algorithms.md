@@ -30,6 +30,8 @@ This is where quantum computing transforms from fascinating physics into practic
 
 ## Grover's Search: Finding Needles in Haystacks
 
+![Grover's amplitude amplification](diagrams/grovers-amplification.png)
+
 **The problem**: Search an **unsorted database** of N items to find a specific target.
 
 **Classical limitation**:

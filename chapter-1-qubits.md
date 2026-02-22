@@ -32,6 +32,8 @@ This limitation, while enabling the entire digital revolution, becomes a fundame
 
 ## Enter the Qubit: Quantum's Revolution
 
+![Classical Bit vs Qubit](diagrams/classical-vs-qubit.png)
+
 A **qubit** (quantum bit) shatters every assumption we just made about classical bits. Instead of being confined to either 0 or 1, a qubit can exist in a **superposition** of both states simultaneously.
 
 ### The Mathematical Representation
@@ -76,6 +78,8 @@ A popular analogy compares a classical bit to a coin lying flat (heads or tails)
 A more accurate analogy might be a coin that exists in a quantum superposition where "heads" and "tails" can interfere with each other like waves, creating patterns that have no classical equivalent.
 
 ## The Bloch Sphere: Visualizing Qubit States
+
+![Bloch Sphere representation of a qubit](diagrams/bloch-sphere.png)
 
 The **Bloch sphere** provides an elegant geometric representation of all possible qubit states. Imagine a sphere with radius 1, where every point on the surface represents a valid qubit state.
 
@@ -144,6 +148,8 @@ Two qubits can have their clock hands pointing at the same length (equal probabi
 
 ### Why Phase Is the Secret Weapon of Quantum Computing
 
+![Constructive and destructive interference](diagrams/phase-interference.png)
+
 Phase is what makes quantum computing more than just "probabilistic classical computing":
 
 1. **Interference requires phase**: Without phase differences, there's no constructive or destructive interference — and without interference, there's no quantum speedup
@@ -163,6 +169,8 @@ On the Bloch sphere, global phase is invisible (it doesn't change the point's po
 This is why a qubit has two real degrees of freedom (θ and φ on the Bloch sphere), not four, even though α and β together contain four real numbers. Normalization removes one degree of freedom, and global phase removes another.
 
 ## Measuring a Qubit: Collapsing the Quantum State
+
+![Measurement collapse of a qubit](diagrams/measurement-collapse.png)
 
 Measurement is one of the most profound aspects of quantum mechanics — the act of extracting information from a qubit fundamentally and irreversibly changes it.
 

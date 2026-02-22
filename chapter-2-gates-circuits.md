@@ -43,6 +43,8 @@ If gates U₁ and U₂ are applied sequentially, the combined operation is U₂U
 
 ## The Pauli Gates: Fundamental Single-Qubit Operations
 
+![Quantum gate operations on the Bloch sphere](diagrams/quantum-gates.png)
+
 The **Pauli gates** (X, Y, Z) are the most fundamental single-qubit gates, named after physicist Wolfgang Pauli. They form the building blocks for more complex operations.
 
 ### The X Gate (Quantum NOT)
@@ -237,6 +239,8 @@ CNOT = [1 0 0 0]
 **Action**: If the control qubit is |1⟩, apply X gate to target qubit; otherwise do nothing.
 
 ### Creating Bell States with CNOT
+
+![Bell state preparation circuit](diagrams/bell-state-circuit.png)
 
 The CNOT gate's true power emerges when combined with superposition:
 
