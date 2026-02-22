@@ -14,3 +14,4 @@ A comprehensive guide to how quantum computers work, from fundamental physics to
 6. [Hardware Approaches](chapter-6-hardware.md)
 7. [Quantum Supremacy & NISQ Era](chapter-7-supremacy-nisq.md)
 8. [The Road Ahead](chapter-8-road-ahead.md)
+9. [The Major Players](chapter-9-major-players.md)
