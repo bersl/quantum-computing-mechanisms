@@ -1,6 +1,8 @@
 # Chapter 9: The Major Players
 *Who's building quantum computers, how, and how far they've come*
 
+*Last updated: February 2025*
+
 The quantum computing race is a global competition involving tech giants, startups, national labs, and entire governments. Each player has bet on a different physical approach, a different timeline, and a different vision of what quantum computers will do first. Here's where they all stand.
 
 ---
@@ -27,11 +29,14 @@ The quantum computing race is a global competition involving tech giants, startu
 
 **Distinctive approach**:
 - **Qiskit**: The most widely-used quantum software framework, open-source
-- **Cloud access**: 60+ quantum systems available through IBM Quantum Network
+- **Cloud access**: 28 quantum devices (~100 qubits each), totaling 2,299 available qubits, with 97% uptime and over 3.6 trillion circuits executed
 - **Error mitigation**: Pioneered techniques to extract useful results from noisy hardware without full error correction
 - **Modularity**: Bet on linking smaller, high-quality chips rather than building one massive chip
+- **Quantum System Two**: A modular multi-QPU architecture designed to link multiple processors together
+- **Manufacturing**: Operates a 300mm semiconductor fab dedicated to qubit manufacturing
+- **Scaling R&D**: Developing ℓ-couplers for inter-module quantum communication, cryogenic CMOS control electronics, and qLDPC (quantum low-density parity check) error-correcting codes for more efficient fault tolerance
 
-**Current standing**: The largest quantum cloud provider with the most deployed systems. Shifted focus from raw qubit count to "useful quantum computing" — practical results on real problems.
+**Current standing**: The largest quantum cloud provider with the most deployed systems. Shifted focus from raw qubit count to "useful quantum computing" — practical results on real problems. Their modular strategy with Quantum System Two and investment in custom semiconductor fabrication position them for the next phase of scaling.
 
 ---
 
@@ -45,7 +50,7 @@ The quantum computing race is a global competition involving tech giants, startu
 **Key milestones**:
 - **2019**: Achieved "quantum supremacy" with 53-qubit Sycamore — completed a sampling task in 200 seconds that would take classical supercomputers ~10,000 years. The most famous result in quantum computing history.
 - **2023**: Demonstrated that increasing the size of their surface error-correcting code actually *reduces* logical error rates — a critical proof that error correction works as theory predicts
-- **2024**: Willow processor (105 qubits) — achieved "below threshold" error correction where adding more qubits genuinely improves performance. Completed a benchmark computation in under 5 minutes that would take the fastest classical supercomputer 10 septillion (10²⁵) years.
+- **2024**: Willow processor (105 qubits) — a landmark result published in *Nature* (December 2024). Tested surface code error correction on 3×3, 5×5, and 7×7 grids of encoded qubits, demonstrating that the error rate *halved* with each increase in grid size. This exponential error reduction with scaling — operating "below threshold" — is the strongest evidence yet that quantum error correction works as theory predicts. Willow also completed a benchmark computation in under 5 minutes that would take the fastest classical supercomputer 10 septillion (10²⁵) years.
 
 **Roadmap ahead**:
 - **Near-term**: Build a long-lived logical qubit from ~1,000 physical qubits
@@ -129,7 +134,7 @@ The quantum computing race is a global competition involving tech giants, startu
 - **2018**: Published a landmark paper claiming Majorana zero modes — later retracted in 2021 due to data issues
 - **2022**: Published new, more rigorous evidence for topological superconductivity in indium arsenide/aluminum nanowires
 - **2024**: Claimed creation of the first topological qubit and published a roadmap to scale
-- **2025**: Announced Majorana 1 — a processor chip based on topological qubits, the first device in their roadmap
+- **2025**: Announced Majorana 1 (February 2025) — the first quantum processor powered by topological qubits. The chip uses a new class of material called a "topoconductor" and contains 8 topological qubits. While still very early — no complex computations have been performed — it represents proof that topological qubits can actually be manufactured. Microsoft claims this architecture could enable a million-qubit quantum computer faster than competing approaches
 
 **Roadmap ahead**:
 - **Near-term**: Demonstrate logical qubit operations with topological protection
@@ -142,7 +147,7 @@ The quantum computing race is a global competition involving tech giants, startu
 - **Azure Quantum platform**: Meanwhile, offers access to IonQ, Quantinuum, Rigetti, and Pasqal hardware through Azure
 - **Software leadership**: Q# programming language, strong compiler and resource estimation tools
 
-**Current standing**: The most uncertain trajectory. If topological qubits deliver on their promise, Microsoft could bypass the massive error correction overhead that burdens other approaches. If not, they're years behind. The 2025 Majorana 1 announcement was a significant credibility boost, but real-world performance data is still emerging.
+**Current standing**: The most uncertain but potentially transformative trajectory. The Majorana 1 announcement in February 2025 was a significant credibility boost — proving that topological qubits can be physically built using topoconductor materials. However, with only 8 qubits and no complex computations demonstrated, real-world performance data is still emerging. If topological qubits deliver on their promise, Microsoft could bypass the massive error correction overhead that burdens other approaches. If not, they're years behind.
 
 ---
 
