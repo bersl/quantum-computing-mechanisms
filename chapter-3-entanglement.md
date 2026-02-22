@@ -88,3 +88,11 @@ Entanglement isn't just quantum weirdness - it's the **computational resource** 
 - N entangled qubits need 2^N complex numbers to describe classically
 - This state space grows so fast that even modest qubit counts overwhelm classical memory
 - **Quantum computer**: Naturally handles this complexity
+
+---
+
+## References & Further Reading
+
+- **Preskill's Caltech Lecture Notes (Ph219)** — Detailed treatment of entanglement and Bell states: [Caltech Ph219](http://theory.caltech.edu/~preskill/ph219/ph219_2023-24/)
+- **Scott Aaronson, "Quantum Computing Since Democritus"** — Chapters on entanglement and Bell inequality: [Lecture Notes](https://www.scottaaronson.com/democritus/)
+- **Qiskit Textbook** — Interactive entanglement demonstrations: [IBM Quantum Learning](https://learning.quantum.ibm.com/)

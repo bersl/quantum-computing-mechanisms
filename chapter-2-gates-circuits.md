@@ -424,3 +424,10 @@ Understanding quantum gates is crucial because they bridge the gap between the a
 - Fault-tolerant quantum gate constructions
 - Experimental demonstrations of quantum gate operations
 - Software tools for quantum circuit design and simulation
+---
+
+## References & Further Reading
+
+- **Qiskit Textbook** — Hands-on quantum gate tutorials with runnable code: [IBM Quantum Learning](https://learning.quantum.ibm.com/)
+- **Preskill's Caltech Lecture Notes (Ph219)** — Rigorous treatment of quantum gates and universality: [Caltech Ph219](http://theory.caltech.edu/~preskill/ph219/ph219_2023-24/)
+- **Nielsen & Chuang** companion resources — Standard reference for quantum circuit model (see Preskill's notes for open-access coverage)

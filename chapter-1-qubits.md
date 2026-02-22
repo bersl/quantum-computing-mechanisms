@@ -354,3 +354,10 @@ Understanding qubits is essential because every quantum algorithm, every quantum
 - Experimental demonstrations of qubit superposition and measurement
 - Physical implementations of qubits in various technologies
 - The mathematical foundations of quantum mechanics and Hilbert spaces
+---
+
+## References & Further Reading
+
+- **Preskill's Caltech Lecture Notes (Ph219)** — Comprehensive mathematical foundations of qubits and quantum states: [Caltech Ph219](http://theory.caltech.edu/~preskill/ph219/ph219_2023-24/)
+- **Qiskit Textbook** — Interactive lessons on qubits, Bloch sphere, and measurement: [IBM Quantum Learning](https://learning.quantum.ibm.com/)
+- **Scott Aaronson, "Quantum Computing Since Democritus"** — Chapter 9 covers qubits from a computer science perspective: [Lecture Notes](https://www.scottaaronson.com/democritus/)

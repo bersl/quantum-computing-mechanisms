@@ -296,3 +296,13 @@ China runs the most significant government-backed quantum computing program alon
 **The wildcard**: A breakthrough in materials science, a new qubit type, or an unexpected algorithmic advance could reshuffle the entire race overnight.
 
 One thing is clear: this isn't a winner-take-all race. The quantum ecosystem will likely be heterogeneous — different hardware for different problems, connected by quantum networks, managed by sophisticated software that abstracts away the underlying physics. The real winners will be the ones who find the first problems where quantum computers deliver undeniable, practical value.
+
+---
+
+## References & Further Reading
+
+- **Google Quantum Supremacy Paper** (2019): [PDF](references/google-supremacy-2019.pdf) | [arXiv](https://arxiv.org/abs/1911.00577)
+- **Google Willow** (2024): [PDF](references/google-willow-2024.pdf) | [arXiv](https://arxiv.org/abs/2408.13687)
+- **Preskill, "Quantum Computing in the NISQ Era and Beyond"** (2018): [PDF](references/preskill-nisq-2018.pdf) | [arXiv](https://arxiv.org/abs/1801.00862)
+- **Quantum Computing Report** — Comprehensive industry tracker: [quantumcomputingreport.com](https://quantumcomputingreport.com/)
+- **Qiskit Textbook** — IBM's open quantum computing curriculum: [IBM Quantum Learning](https://learning.quantum.ibm.com/)

@@ -121,3 +121,12 @@ This is where quantum computing transforms from fascinating physics into practic
 - **Future impact**: Post-quantum cryptography, drug discovery, climate modeling
 
 **Key insight**: Quantum algorithms don't make everything faster — they provide **exponential speedups for specific, structured problems** that happen to be enormously important.
+
+---
+
+## References & Further Reading
+
+- **Shor's Original Paper** (1994) — "Algorithms for Quantum Computation: Discrete Logarithms and Factoring": [PDF](references/shor-1994.pdf) | [arXiv](https://arxiv.org/abs/quant-ph/9508027)
+- **Grover's Original Paper** (1996) — "A Fast Quantum Mechanical Algorithm for Database Search": [PDF](references/grover-1996.pdf) | [arXiv](https://arxiv.org/abs/quant-ph/9605043)
+- **Qiskit Textbook** — Step-by-step algorithm implementations: [IBM Quantum Learning](https://learning.quantum.ibm.com/)
+- **Scott Aaronson, "Quantum Computing Since Democritus"** — Computational complexity context for quantum algorithms: [Lecture Notes](https://www.scottaaronson.com/democritus/)

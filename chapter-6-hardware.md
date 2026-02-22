@@ -151,3 +151,11 @@ Building a quantum computer is like building a time machine - the physics is sou
 - Silicon spin: Leverage semiconductor industry
 
 **The reality**: **No single approach is clearly winning!** Different platforms excel for different applications. The likely outcome is a hybrid future — specialized systems working together, superconducting processors connected by photonic networks, with topological elements for ultra-stable storage.
+
+---
+
+## References & Further Reading
+
+- **Preskill, "Quantum Computing in the NISQ Era and Beyond"** (2018) — Hardware landscape and near-term prospects: [PDF](references/preskill-nisq-2018.pdf) | [arXiv](https://arxiv.org/abs/1801.00862)
+- **Google Quantum Supremacy Paper** (2019) — Superconducting processor demonstration: [PDF](references/google-supremacy-2019.pdf) | [arXiv](https://arxiv.org/abs/1911.00577)
+- **Fowler et al., Surface Codes** (2012) — Architecture for large-scale quantum computation: [PDF](references/fowler-surface-codes-2012.pdf) | [arXiv](https://arxiv.org/abs/1208.0928)

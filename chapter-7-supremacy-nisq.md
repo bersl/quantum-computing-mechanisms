@@ -115,3 +115,11 @@ Argued the classical simulation could be done in 2.5 days with better algorithms
 - **Cryptography**: Post-quantum security implemented preemptively
 
 **The bigger picture**: We're in quantum computing's "transistor era" - the fundamental building blocks work, but we're still figuring out how to build useful systems.
+
+---
+
+## References & Further Reading
+
+- **Google Quantum Supremacy Paper** (2019) — "Quantum supremacy using a programmable superconducting processor": [PDF](references/google-supremacy-2019.pdf) | [arXiv](https://arxiv.org/abs/1911.00577)
+- **Preskill, "Quantum Computing in the NISQ Era and Beyond"** (2018) — Coined "NISQ" and defined the era: [PDF](references/preskill-nisq-2018.pdf) | [arXiv](https://arxiv.org/abs/1801.00862)
+- **Google Willow** (2024) — Below-threshold error correction, a NISQ-era milestone: [PDF](references/google-willow-2024.pdf) | [arXiv](https://arxiv.org/abs/2408.13687)

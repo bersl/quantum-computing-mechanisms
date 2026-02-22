@@ -140,3 +140,12 @@ Understanding this distinction is crucial for grasping quantum computing's curre
 - **Small logical qubits**: 2025–2030 (1–10 logical qubits)
 - **Useful algorithms**: 2030–2040 (100s of logical qubits)
 - **Full fault tolerance**: 2040+ (1000s of logical qubits)
+
+---
+
+## References & Further Reading
+
+- **Fowler et al., "Surface codes: Towards practical large-scale quantum computation"** (2012): [PDF](references/fowler-surface-codes-2012.pdf) | [arXiv](https://arxiv.org/abs/1208.0928)
+- **Terhal, "Quantum error correction for quantum memories"** (2015): [PDF](references/terhal-qec-review-2015.pdf) | [arXiv](https://arxiv.org/abs/1302.3428)
+- **Google Willow** — Below-threshold quantum error correction (2024): [PDF](references/google-willow-2024.pdf) | [arXiv](https://arxiv.org/abs/2408.13687)
+- **Preskill's Caltech Lecture Notes** — Fault-tolerant quantum computation: [Caltech Ph219](http://theory.caltech.edu/~preskill/ph219/ph219_2023-24/)

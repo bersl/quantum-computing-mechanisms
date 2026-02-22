@@ -127,3 +127,12 @@ The quantum future isn't science fiction - it's engineering challenges with know
 ---
 
 *End of Quantum Computing: Mechanisms Unveiled*
+
+---
+
+## References & Further Reading
+
+- **Preskill, "Quantum Computing in the NISQ Era and Beyond"** (2018) — Roadmap from NISQ to fault tolerance: [PDF](references/preskill-nisq-2018.pdf) | [arXiv](https://arxiv.org/abs/1801.00862)
+- **Google Willow** (2024) — Key milestone toward fault-tolerant quantum computing: [PDF](references/google-willow-2024.pdf) | [arXiv](https://arxiv.org/abs/2408.13687)
+- **Terhal, QEC Review** (2015) — The error correction challenge ahead: [PDF](references/terhal-qec-review-2015.pdf) | [arXiv](https://arxiv.org/abs/1302.3428)
+- **Quantum Computing Report** — Industry progress tracking: [quantumcomputingreport.com](https://quantumcomputingreport.com/)
