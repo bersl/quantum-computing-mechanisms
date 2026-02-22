@@ -151,6 +151,35 @@ The abstract "measurement" maps to concrete physical processes depending on the 
 
 **Common challenge across all platforms**: No measurement is perfect. Readout errors (1–5%) mean the detector sometimes reports the wrong state, which is why quantum algorithms run many shots and use statistical analysis.
 
+### The Paradox: Qubits Are Fundamentally Unmeasurable
+
+Here's the deep puzzle at the heart of quantum computing: **you can never fully read out a qubit's state.**
+
+A qubit |ψ⟩ = α|0⟩ + β|1⟩ is described by two complex numbers — that's four real parameters (reduced to two by normalization and global phase). But a single measurement gives you just **one classical bit**: 0 or 1. The rich quantum information — the exact values of α and β, the delicate phase relationships — is destroyed the instant you look.
+
+This isn't a limitation of our instruments. It's a law of physics:
+- **No single-shot readout**: One measurement of one qubit can never reveal its full state
+- **No cloning workaround**: You can't copy the qubit first and measure the copies (no-cloning theorem)
+- **No gentle measurement**: There's no way to "peek" without disturbing the state
+
+**So how does quantum computing work at all?**
+
+The answer is a combination of clever strategies:
+
+1. **Statistical reconstruction (tomography)**: Prepare the *same* state thousands of times, measure each copy in different bases, and statistically reconstruct the probabilities. This tells you about the state, but requires many identical copies — it's used for calibration and verification, not during computation.
+
+2. **Algorithmic design**: Quantum algorithms are crafted so that the answer you care about gets **amplified** to near-certainty before measurement. Grover's algorithm doesn't need to read out the full quantum state — it arranges interference so the correct answer has ~100% probability. You measure once and get the right answer.
+
+3. **Interference before measurement**: The whole point of a quantum circuit is to manipulate amplitudes so that wrong answers cancel out (destructive interference) and right answers reinforce (constructive interference). By the time you measure, the superposition has been sculpted into something useful.
+
+4. **Repeated sampling**: Run the circuit many times, collect statistics. If the algorithm is well-designed, the correct answer appears with overwhelming frequency.
+
+5. **Partial measurement**: Sometimes you measure only some qubits, collapsing part of the system while preserving quantum information in the rest. This is how error correction syndromes work — you learn about errors without touching the data.
+
+**The key insight**: Quantum computing doesn't require reading the full quantum state. It requires designing computations where the answer naturally concentrates into a measurable outcome. The "unmeasurability" of qubits isn't a bug — it's a constraint that quantum algorithms are specifically engineered to work within.
+
+Think of it this way: you can't see the wind, but you can build a sail that harnesses it. Quantum algorithms are sails for quantum states — they capture the computational power of superposition and interference without ever needing to observe the full quantum state directly.
+
 ### Why Measurement Matters for Computation
 
 Measurement isn't just the "end" of a quantum computation — it's a strategic tool:
