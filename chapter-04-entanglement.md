@@ -6,7 +6,7 @@
 
 Entanglement is quantum mechanics' most distinctive feature. When qubits become entangled, measuring one **instantly** affects the other, regardless of distance. This isn't science fiction — it's experimentally verified physics, and it's the foundation of quantum computing power.
 
-In [Chapter 3](chapter-3-gates-circuits.md), we saw how the CNOT gate can create entangled states from independent qubits. Now let's explore what entanglement actually is, why it matters, and what makes it so powerful.
+In [Chapter 3](chapter-03-gates-circuits.md), we saw how the CNOT gate can create entangled states from independent qubits. Now let's explore what entanglement actually is, why it matters, and what makes it so powerful.
 
 ## Bell States: The Entanglement Showcase
 
@@ -118,7 +118,7 @@ Crucially, not all multi-qubit states are entangled. **Product states** (no enta
 ### Concrete Applications
 
 - **Quantum algorithms**: Most algorithms that achieve exponential speedup rely on creating and manipulating entangled states. Shor's algorithm entangles the "input" and "output" registers through modular exponentiation.
-- **Quantum error correction**: Logical qubits are encoded in entangled states of many physical qubits. The entanglement structure is what protects against errors (see [Chapter 6](chapter-6-error-correction.md)).
+- **Quantum error correction**: Logical qubits are encoded in entangled states of many physical qubits. The entanglement structure is what protects against errors (see [Chapter 6](chapter-06-error-correction.md)).
 - **Quantum cryptography**: Entanglement-based protocols like E91 (Ekert's protocol) derive their security directly from Bell inequality violations.
 - **Quantum sensing**: Entangled probe states can achieve measurement precision beyond classical limits (the Heisenberg limit vs. the shot noise limit).
 

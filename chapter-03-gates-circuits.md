@@ -4,7 +4,7 @@
 
 ## Introduction
 
-We've got qubits ([Chapter 1](chapter-1-qubits.md)) and we understand the physics that makes them powerful — phase, interference, measurement ([Chapter 2](chapter-2-phase-interference-measurement.md)). Great. But how do we actually *do things* with them?
+We've got qubits ([Chapter 1](chapter-01-qubits.md)) and we understand the physics that makes them powerful — phase, interference, measurement ([Chapter 2](chapter-02-phase-interference-measurement.md)). Great. But how do we actually *do things* with them?
 
 This is where quantum gates come in. Just as classical computers use logic gates (AND, OR, NOT) to manipulate bits, quantum computers use **quantum gates** to manipulate qubits. Think of them as the verbs of quantum computing — the actions you can perform on qubits to sculpt interference patterns and coax out useful answers.
 
@@ -108,7 +108,7 @@ Z = [1  0]
 
 **Effect**: **Phase flip** — leaves |0⟩ unchanged, adds minus sign to |1⟩.
 
-**Key insight**: While classical gates only manipulate probabilities, the Z gate manipulates quantum **phase** — the hidden information we explored in [Chapter 2](chapter-2-phase-interference-measurement.md) that drives interference and, ultimately, quantum speedups.
+**Key insight**: While classical gates only manipulate probabilities, the Z gate manipulates quantum **phase** — the hidden information we explored in [Chapter 2](chapter-02-phase-interference-measurement.md) that drives interference and, ultimately, quantum speedups.
 
 ## The Hadamard Gate: Creating Superposition
 
@@ -242,7 +242,7 @@ The CNOT gate's true power emerges when combined with superposition:
 2. Apply H to first qubit: (|0⟩ + |1⟩)|0⟩/√2 = (|00⟩ + |10⟩)/√2
 3. Apply CNOT: (|00⟩ + |11⟩)/√2
 
-The result is maximally entangled — measuring the first qubit instantly determines the second qubit's state, regardless of physical separation. We'll explore entanglement in detail in [Chapter 4](chapter-4-entanglement.md).
+The result is maximally entangled — measuring the first qubit instantly determines the second qubit's state, regardless of physical separation. We'll explore entanglement in detail in [Chapter 4](chapter-04-entanglement.md).
 
 ### Properties of CNOT
 

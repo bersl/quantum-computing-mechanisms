@@ -58,7 +58,7 @@ Don't let the notation scare you — this just says the qubit is a blend of |0�
 
 **Measurement Collapse**: When you measure a qubit, the superposition collapses to either |0⟩ (with probability |α|²) or |1⟩ (with probability |β|²). The act of measurement fundamentally changes the quantum state.
 
-**Phase Information**: The relative phase between α and β carries information that has no classical analog. Two qubits might have the same measurement probabilities but different quantum behavior due to phase differences. This turns out to be enormously important — we'll explore it in depth in [Chapter 2](chapter-2-phase-interference-measurement.md).
+**Phase Information**: The relative phase between α and β carries information that has no classical analog. Two qubits might have the same measurement probabilities but different quantum behavior due to phase differences. This turns out to be enormously important — we'll explore it in depth in [Chapter 2](chapter-02-phase-interference-measurement.md).
 
 ### The Coin Analogy (And Its Limitations)
 
@@ -104,7 +104,7 @@ Where θ (theta) and φ (phi) are the spherical coordinates:
 
 **Infinite States**: While a classical bit has 2 possible states, a qubit has **infinite** possible states — every point on a continuous sphere surface.
 
-**Geometric Operations**: Quantum gates correspond to rotations on the Bloch sphere, providing intuitive visualization of quantum operations (as we'll see in [Chapter 3](chapter-3-gates-circuits.md)).
+**Geometric Operations**: Quantum gates correspond to rotations on the Bloch sphere, providing intuitive visualization of quantum operations (as we'll see in [Chapter 3](chapter-03-gates-circuits.md)).
 
 **Measurement**: Measuring in the |0⟩/|1⟩ basis projects the state onto the north-south axis.
 
@@ -138,7 +138,7 @@ However, this power comes with a critical limitation: **decoherence**. Quantum s
 - **Measurement**: Observing the system collapses superposition
 - **Imperfect operations**: Noise in quantum gates introduces errors
 
-Current qubits maintain their quantum properties for only microseconds to milliseconds, making quantum computation a race against decoherence. We'll explore how quantum error correction tackles this challenge in [Chapter 6](chapter-6-error-correction.md).
+Current qubits maintain their quantum properties for only microseconds to milliseconds, making quantum computation a race against decoherence. We'll explore how quantum error correction tackles this challenge in [Chapter 6](chapter-06-error-correction.md).
 
 ## Chapter Summary
 

@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This is where quantum computing transforms from fascinating physics into practical capability. The algorithms in this chapter showcase **quantum advantage** — solving problems exponentially or quadratically faster than any known classical approach. Each one works by carefully orchestrating the interference effects we explored in [Chapter 2](chapter-2-phase-interference-measurement.md), using the gates from [Chapter 3](chapter-3-gates-circuits.md) on entangled states from [Chapter 4](chapter-4-entanglement.md).
+This is where quantum computing transforms from fascinating physics into practical capability. The algorithms in this chapter showcase **quantum advantage** — solving problems exponentially or quadratically faster than any known classical approach. Each one works by carefully orchestrating the interference effects we explored in [Chapter 2](chapter-02-phase-interference-measurement.md), using the gates from [Chapter 3](chapter-03-gates-circuits.md) on entangled states from [Chapter 4](chapter-04-entanglement.md).
 
 ## Deutsch-Jozsa Algorithm: Quantum's First Victory
 
@@ -92,7 +92,7 @@ This is where quantum computing transforms from fascinating physics into practic
 - **Reversible**: Must work on superpositions without destroying them
 - **Implementation**: Often the hardest part in practice
 
-**Interference is key**: As we explored in [Chapter 2](chapter-2-phase-interference-measurement.md), interference is what converts phase information into computational results. Every quantum algorithm carefully choreographs constructive interference on correct answers and destructive interference on wrong ones.
+**Interference is key**: As we explored in [Chapter 2](chapter-02-phase-interference-measurement.md), interference is what converts phase information into computational results. Every quantum algorithm carefully choreographs constructive interference on correct answers and destructive interference on wrong ones.
 
 **Quantum Fourier Transform**: The secret weapon in many algorithms:
 - **Classical FFT**: Cornerstone of digital signal processing

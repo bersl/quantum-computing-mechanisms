@@ -75,7 +75,7 @@ We're living through quantum computing's first generation — the era of working
 
 ## The Path Forward
 
-The transition from NISQ to fault-tolerant quantum computing is the central challenge of the field. For a detailed discussion of timelines, milestones, and what becomes possible with fault tolerance, see [Chapter 9: The Road Ahead](chapter-9-road-ahead.md).
+The transition from NISQ to fault-tolerant quantum computing is the central challenge of the field. For a detailed discussion of timelines, milestones, and what becomes possible with fault tolerance, see [Chapter 9: The Road Ahead](chapter-09-road-ahead.md).
 
 Key markers along the way:
 - **First useful logical qubits**: Demonstrating that error-corrected qubits outperform their physical components

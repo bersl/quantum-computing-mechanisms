@@ -25,7 +25,7 @@ The quantum future isn't science fiction — it's a set of engineering challenge
 
 **The cryptographic threat**:
 - **Current encryption**: RSA and elliptic curve cryptography rely on factoring and discrete logarithm hardness
-- **Shor's algorithm**: Makes these problems tractable for quantum computers (see [Chapter 5](chapter-5-algorithms.md))
+- **Shor's algorithm**: Makes these problems tractable for quantum computers (see [Chapter 5](chapter-05-algorithms.md))
 - **"Harvest now, decrypt later"**: Adversaries can store encrypted data today and decrypt it once quantum computers are powerful enough
 - **Urgency**: The migration to quantum-resistant cryptography must happen *before* large-scale quantum computers exist
 

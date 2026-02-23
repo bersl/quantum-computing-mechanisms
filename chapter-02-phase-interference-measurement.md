@@ -4,7 +4,7 @@
 
 ## Introduction
 
-In [Chapter 1](chapter-1-qubits.md), we saw that qubits can exist in superposition — a combination of |0⟩ and |1⟩ with complex probability amplitudes. But superposition alone doesn't make a computer. What turns quantum mechanics into computational power is a trio of deeply connected concepts: **phase**, **interference**, and **measurement**.
+In [Chapter 1](chapter-01-qubits.md), we saw that qubits can exist in superposition — a combination of |0⟩ and |1⟩ with complex probability amplitudes. But superposition alone doesn't make a computer. What turns quantum mechanics into computational power is a trio of deeply connected concepts: **phase**, **interference**, and **measurement**.
 
 Phase is the hidden variable that distinguishes quantum computing from mere randomness. Interference is the engine that converts phase differences into computational results. And measurement is the bridge between the quantum world and the answers we need. Together, they're the reason quantum algorithms can do things classical algorithms can't.
 
@@ -200,7 +200,7 @@ Measurement isn't just the "end" of a quantum computation — it's a strategic t
 
 - **Mid-circuit measurement**: Some algorithms measure certain qubits partway through, using the result to decide what gates to apply next (adaptive circuits)
 - **Measurement-based quantum computing**: An entire paradigm where computation is performed purely through sequential measurements on a pre-entangled cluster state
-- **Error correction**: Syndrome measurements detect errors without disturbing the encoded data — the key trick of quantum error correction (see [Chapter 6](chapter-6-error-correction.md))
+- **Error correction**: Syndrome measurements detect errors without disturbing the encoded data — the key trick of quantum error correction (see [Chapter 6](chapter-06-error-correction.md))
 
 ## Chapter Summary
 
