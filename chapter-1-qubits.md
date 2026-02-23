@@ -168,6 +168,88 @@ On the Bloch sphere, global phase is invisible (it doesn't change the point's po
 
 This is why a qubit has two real degrees of freedom (θ and φ on the Bloch sphere), not four, even though α and β together contain four real numbers. Normalization removes one degree of freedom, and global phase removes another.
 
+## Quantum Interference: The Engine of Quantum Computing
+
+![Constructive and destructive interference](diagrams/phase-interference.png)
+
+If superposition gives quantum computing its raw material, and phase gives it structure, then **interference** is the engine that turns both into computational power. Interference is not just a feature of quantum mechanics — it's the *reason* quantum computers can outperform classical ones.
+
+### What Is Interference?
+
+Interference occurs when two or more quantum amplitudes combine. Because amplitudes are complex numbers (with both magnitude and direction), they can either reinforce or cancel each other:
+
+- **Constructive interference**: Amplitudes point in the same direction → they add up → higher probability
+- **Destructive interference**: Amplitudes point in opposite directions → they cancel → lower probability (possibly zero)
+
+This is fundamentally different from classical probability, where probabilities only add up — they can never cancel. If there's a 30% chance of rain from one weather system and a 20% chance from another, the combined chance is *at least* 20%, never zero. In quantum mechanics, two paths that each have nonzero probability can combine to give **exactly zero** probability.
+
+### The Double-Slit Experiment: Interference in Action
+
+The most famous demonstration of quantum interference is the double-slit experiment:
+
+1. **Setup**: Fire particles (photons or electrons) one at a time at a barrier with two slits
+2. **Classical expectation**: Two bright bands on the detector, one behind each slit
+3. **Quantum reality**: An interference pattern of alternating bright and dark bands — even when particles go through one at a time
+
+**What's happening**: Each particle goes through *both* slits simultaneously (superposition). The two paths have different phase relationships at different points on the detector:
+- Where the path lengths differ by a whole wavelength → constructive interference → bright band
+- Where the path lengths differ by half a wavelength → destructive interference → dark band
+
+**The punchline**: If you place a detector at the slits to determine *which* slit the particle went through, the interference pattern vanishes. Measurement destroys the superposition that made interference possible.
+
+### Interference in Quantum Circuits: A Worked Example
+
+Let's trace interference through the simplest possible quantum algorithm — applying two Hadamard gates in sequence:
+
+**Step 1**: Start with |0⟩
+
+**Step 2**: Apply first Hadamard → (|0⟩ + |1⟩)/√2
+
+The qubit is now in equal superposition — two "paths" through the computation.
+
+**Step 3**: Apply second Hadamard to each component:
+- The |0⟩ part becomes (|0⟩ + |1⟩)/√2
+- The |1⟩ part becomes (|0⟩ − |1⟩)/√2
+
+**Step 4**: Combine the results:
+- **|0⟩ amplitude**: +1/2 (from the first path) + 1/2 (from the second path) = **+1** → constructive!
+- **|1⟩ amplitude**: +1/2 (from the first path) − 1/2 (from the second path) = **0** → destructive!
+
+**Result**: The qubit is back to |0⟩ with certainty. The |1⟩ possibility has been completely eliminated by destructive interference.
+
+This is the simplest demonstration of how interference works in a circuit: two computational paths combine, and phase differences determine which outcomes survive and which vanish. **Every quantum algorithm is a more sophisticated version of this same trick.**
+
+### How Algorithms Use Interference
+
+Quantum algorithms are carefully designed choreographies of interference:
+
+1. **Deutsch-Jozsa**: Creates a superposition of all inputs, applies the function, then uses a final Hadamard to create interference. For constant functions, all paths constructively interfere to one outcome. For balanced functions, they interfere to a different outcome. One measurement distinguishes what would take 2^(N-1)+1 classical evaluations.
+
+2. **Grover's search**: Each iteration has two interference steps — the oracle flips the phase of the correct answer, then the diffusion operator creates interference that amplifies the marked item's amplitude while suppressing all others. After √N iterations, constructive interference has concentrated nearly all probability on the target.
+
+3. **Shor's algorithm**: Uses the Quantum Fourier Transform to create interference patterns that reveal the period of a function. The period information is encoded in which amplitudes constructively interfere, turning an exponentially hard classical problem into a polynomial quantum one.
+
+### Why Interference Makes Quantum Computing Hard
+
+Interference is powerful but extraordinarily fragile:
+
+- **Precision required**: Amplitudes must align precisely for interference to work. Small errors in phase accumulate and blur the interference pattern, turning a sharp answer into noise.
+- **Decoherence destroys interference**: Environmental interactions randomize phases, which is equivalent to washing out the interference pattern. This is why quantum computers need extreme isolation.
+- **Error correction protects interference**: The entire apparatus of quantum error correction (see [Chapter 5](chapter-5-error-correction.md)) exists to preserve the delicate phase relationships that make interference possible.
+- **Algorithm design is hard**: Finding problems where interference can be harnessed requires deep mathematical insight. You need the wrong answers to have phases that cancel — and this structural requirement limits which problems benefit from quantum speedup.
+
+### Classical Waves vs Quantum Interference
+
+A natural question: classical waves also interfere (sound waves, water waves, radio waves). What makes quantum interference special?
+
+The key difference is **probability amplitudes**:
+- **Classical waves**: Intensities are always positive. Interference affects the wave pattern, but probabilities (intensities) add normally.
+- **Quantum amplitudes**: Can be negative or complex. Probabilities are calculated as |amplitude|², but the amplitudes themselves can cancel before you square them.
+
+This means quantum mechanics allows something impossible in classical probability: two events that are each individually possible can combine to become **impossible**. It's as if you had two routes to work, each taking 30 minutes, but taking both routes simultaneously means you never arrive. That's quantum interference — and it has no classical analog.
+
+This is the deep reason quantum computers are more powerful than classical probabilistic computers. Classical randomness can only add probabilities. Quantum mechanics can subtract them.
+
 ## Measuring a Qubit: Collapsing the Quantum State
 
 ![Measurement collapse of a qubit](diagrams/measurement-collapse.png)
