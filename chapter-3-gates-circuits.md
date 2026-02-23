@@ -4,13 +4,13 @@
 
 ## Introduction
 
-In Chapters [1](chapter-1-qubits.md) and [2](chapter-2-phase-interference-measurement.md), we established what qubits are and how phase, interference, and measurement give them computational power. Now the question becomes: how do we actually compute with them?
+We've got qubits ([Chapter 1](chapter-1-qubits.md)) and we understand the physics that makes them powerful — phase, interference, measurement ([Chapter 2](chapter-2-phase-interference-measurement.md)). Great. But how do we actually *do things* with them?
 
-Classical computers use logic gates (AND, OR, NOT) to manipulate bits and build complex calculations. Quantum computers use **quantum gates** to manipulate qubits while preserving their quantum properties. These gates are how we sculpt the interference patterns that make quantum algorithms work.
+This is where quantum gates come in. Just as classical computers use logic gates (AND, OR, NOT) to manipulate bits, quantum computers use **quantum gates** to manipulate qubits. Think of them as the verbs of quantum computing — the actions you can perform on qubits to sculpt interference patterns and coax out useful answers.
 
 ## Fundamental Principles of Quantum Gates
 
-Before diving into specific gates, let's understand the principles that govern all quantum operations.
+Before we get into specific gates, there are a few ground rules that every quantum operation must follow. These aren't arbitrary — they come straight from the physics.
 
 ### Unitarity: The Quantum Constraint
 

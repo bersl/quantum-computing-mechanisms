@@ -135,6 +135,8 @@ The scaling challenge is formidable: building fault-tolerant quantum computers r
 
 **Timeline estimates**: For a detailed look at the roadmap from today's noisy systems to fault-tolerant quantum computing, see [Chapter 9: The Road Ahead](chapter-9-road-ahead.md).
 
+Now that we know *what* needs to be corrected, the next question is: what are these physical qubits actually made of? In the next chapter, we'll tour the wildly different hardware approaches competing to build a quantum computer.
+
 ---
 
 ## References & Further Reading

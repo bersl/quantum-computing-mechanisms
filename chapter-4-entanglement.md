@@ -122,6 +122,24 @@ Crucially, not all multi-qubit states are entangled. **Product states** (no enta
 - **Quantum cryptography**: Entanglement-based protocols like E91 (Ekert's protocol) derive their security directly from Bell inequality violations.
 - **Quantum sensing**: Entangled probe states can achieve measurement precision beyond classical limits (the Heisenberg limit vs. the shot noise limit).
 
+### How Entanglement Powers a Speedup: Superdense Coding
+
+To make the "entanglement as computational resource" idea concrete, consider **superdense coding** — a protocol where entanglement lets you send two classical bits of information by transmitting just one qubit.
+
+**Setup**: Alice and Bob share a Bell pair |Φ+⟩ = (|00⟩ + |11⟩)/√2. Alice has qubit A, Bob has qubit B.
+
+**The protocol**:
+1. Alice wants to send a two-bit message (00, 01, 10, or 11) to Bob
+2. Depending on her message, Alice applies one of four operations to *only her qubit*:
+   - **Send 00**: Do nothing → state stays |Φ+⟩
+   - **Send 01**: Apply X gate → state becomes |Ψ+⟩ = (|01⟩ + |10⟩)/√2
+   - **Send 10**: Apply Z gate → state becomes |Φ-⟩ = (|00⟩ - |11⟩)/√2
+   - **Send 11**: Apply X then Z → state becomes |Ψ-⟩ = (|01⟩ - |10⟩)/√2
+3. Alice sends her one qubit to Bob
+4. Bob now has both qubits. He applies a CNOT then a Hadamard and measures — recovering Alice's two-bit message with certainty
+
+**Why this matters**: Without entanglement, one qubit can carry at most one bit of information (Holevo's theorem). Entanglement effectively "pre-loads" a communication channel, doubling its capacity. This same principle — entanglement letting you do more with less — is what drives speedups in quantum algorithms. In Shor's algorithm, entanglement between the input register and the output register during modular exponentiation creates correlations that the Quantum Fourier Transform can then extract, revealing the period of the function exponentially faster than any known classical approach.
+
 ### Measuring Entanglement
 
 How do you tell if a state is entangled?

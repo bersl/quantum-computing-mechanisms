@@ -124,6 +124,8 @@ This is where quantum computing transforms from fascinating physics into practic
 
 **Key insight**: Quantum algorithms don't make everything faster — they provide speedups for **specific, structured problems** that happen to be enormously important.
 
+Of course, all these beautiful algorithms assume perfect qubits — which don't exist. In the next chapter, we'll confront quantum computing's greatest engineering challenge: how to compute reliably with unreliable hardware.
+
 ---
 
 ## References & Further Reading

@@ -1,4 +1,4 @@
-# Chapter 10: Myths & Misconceptions
+# Chapter 11: Myths & Misconceptions
 *Clearing up the most persistent misunderstandings about quantum computing*
 
 Quantum computing is surrounded by more hype, confusion, and outright myth than almost any other technology. Some of these misconceptions come from lazy pop-science analogies. Others come from genuine difficulty — quantum mechanics is deeply unintuitive. And a few are deliberately encouraged by companies chasing investment dollars.
@@ -217,7 +217,7 @@ The honest assessment: Quantum computing is **real but overhyped in its timeline
 
 A practical guide for reading quantum computing news critically:
 
-**Red flags** 🚩:
+**Red flags**:
 - "Quantum computer solves [problem] instantly" — nothing is instant
 - "N qubits means 2^N times faster" — gross oversimplification
 - Qubit count as the only metric — ask about fidelity and circuit depth
@@ -226,7 +226,7 @@ A practical guide for reading quantum computing news critically:
 - "Breaks all encryption" — only specific schemes, and fixes exist
 - Claims without peer-reviewed papers — demand evidence
 
-**Green flags** ✅:
+**Green flags**:
 - Specific error rates and benchmarks reported
 - Published in peer-reviewed journals (Nature, Science, Physical Review)
 - Honest about limitations and timeline

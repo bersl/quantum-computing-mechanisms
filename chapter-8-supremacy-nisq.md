@@ -84,6 +84,8 @@ Key markers along the way:
 
 The bigger picture: we're in quantum computing's foundational era. The principles are proven, the first devices work, and the engineering roadmap — while daunting — is clear. What remains is execution.
 
+So what does that roadmap actually look like? In the next chapter, we'll map out the path from today's noisy machines to the fault-tolerant quantum computers that could transform entire industries.
+
 ---
 
 ## References & Further Reading

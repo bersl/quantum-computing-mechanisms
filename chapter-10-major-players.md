@@ -1,4 +1,4 @@
-# Chapter 9: The Major Players
+# Chapter 10: The Major Players
 *Who's building quantum computers, how, and how far they've come*
 
 *Last updated: February 2025*
@@ -296,6 +296,8 @@ China runs the most significant government-backed quantum computing program alon
 **The wildcard**: A breakthrough in materials science, a new qubit type, or an unexpected algorithmic advance could reshuffle the entire race overnight.
 
 One thing is clear: this isn't a winner-take-all race. The quantum ecosystem will likely be heterogeneous — different hardware for different problems, connected by quantum networks, managed by sophisticated software that abstracts away the underlying physics. The real winners will be the ones who find the first problems where quantum computers deliver undeniable, practical value.
+
+With all this excitement and investment comes a lot of noise — hype, misconceptions, and outright myths. In the final chapter, we'll separate quantum fact from quantum fiction.
 
 ---
 
