@@ -1,16 +1,16 @@
-# Chapter 2: Quantum Gates & Circuits
+# Chapter 3: Quantum Gates & Circuits
 
 *The quantum toolbox for manipulating qubits*
 
 ## Introduction
 
-Having established what qubits are and how they differ fundamentally from classical bits, we now turn to the question: how do we compute with them? Classical computers use logic gates (AND, OR, NOT) to manipulate bits and build complex calculations. Quantum computers use **quantum gates** to manipulate qubits while preserving their quantum properties.
+In Chapters [1](chapter-1-qubits.md) and [2](chapter-2-phase-interference-measurement.md), we established what qubits are and how phase, interference, and measurement give them computational power. Now the question becomes: how do we actually compute with them?
 
-This chapter explores the fundamental quantum gates, how they work, and how they combine to form quantum circuits that implement quantum algorithms. We'll see how quantum gates are fundamentally different from classical gates - they're reversible, they can create and manipulate superposition, and they can entangle qubits in ways that have no classical analog.
+Classical computers use logic gates (AND, OR, NOT) to manipulate bits and build complex calculations. Quantum computers use **quantum gates** to manipulate qubits while preserving their quantum properties. These gates are how we sculpt the interference patterns that make quantum algorithms work.
 
 ## Fundamental Principles of Quantum Gates
 
-Before diving into specific gates, we need to understand the principles that govern all quantum operations.
+Before diving into specific gates, let's understand the principles that govern all quantum operations.
 
 ### Unitarity: The Quantum Constraint
 
@@ -28,7 +28,7 @@ All quantum gates (except measurement) must be **unitary operations**. Mathemati
 
 ### Quantum Gates as Rotations
 
-On the Bloch sphere representation of qubits, quantum gates correspond to **rotations**. Every single-qubit gate rotates the qubit state to a new position on the sphere. This geometric interpretation provides intuitive understanding:
+On the Bloch sphere, quantum gates correspond to **rotations**. Every single-qubit gate rotates the qubit state to a new position on the sphere:
 
 - **Pauli gates**: 180° rotations around different axes
 - **Hadamard gate**: 180° rotation around the X+Z axis
@@ -39,7 +39,7 @@ On the Bloch sphere representation of qubits, quantum gates correspond to **rota
 
 Quantum gates can be composed sequentially to create more complex operations. The mathematical representation involves matrix multiplication:
 
-If gates U₁ and U₂ are applied sequentially, the combined operation is U₂U₁ (note the reverse order - rightmost gate applied first).
+If gates U₁ and U₂ are applied sequentially, the combined operation is U₂U₁ (note the reverse order — rightmost gate applied first).
 
 ## The Pauli Gates: Fundamental Single-Qubit Operations
 
@@ -62,7 +62,7 @@ X = [0 1]
 
 **Bloch sphere interpretation**: 180° rotation around the X-axis
 
-**Classical analog**: The NOT gate - flips 0↔1
+**Classical analog**: The NOT gate — flips 0↔1
 
 **Key properties:**
 - **Self-inverse**: XX = I (applying twice returns to original state)
@@ -84,7 +84,7 @@ Y = [0 -i]
 
 **Bloch sphere interpretation**: 180° rotation around the Y-axis
 
-**Effect**: Both bit-flip AND phase-flip - it's like applying X and Z gates simultaneously
+**Effect**: Both bit-flip AND phase-flip — like applying X and Z gates simultaneously.
 
 **Key properties:**
 - **Self-inverse**: YY = I
@@ -106,18 +106,9 @@ Z = [1  0]
 
 **Bloch sphere interpretation**: 180° rotation around the Z-axis
 
-**Effect**: **Phase flip** - leaves |0⟩ unchanged, adds minus sign to |1⟩
+**Effect**: **Phase flip** — leaves |0⟩ unchanged, adds minus sign to |1⟩.
 
-**Key insight**: While classical gates only manipulate probabilities, the Z gate manipulates quantum **phase** - information that has no classical analog but affects quantum interference.
-
-### Understanding Quantum Phase
-
-The Z gate introduces our first encounter with purely quantum behavior: **quantum phase**. Consider these two states:
-
-- State A: (|0⟩ + |1⟩)/√2
-- State B: (|0⟩ - |1⟩)/√2
-
-Classically, these states are identical - both give 50% probability of measuring 0 or 1. But quantum mechanically, they're different states that can be distinguished through quantum interference. The Z gate converts State A to State B.
+**Key insight**: While classical gates only manipulate probabilities, the Z gate manipulates quantum **phase** — the hidden information we explored in [Chapter 2](chapter-2-phase-interference-measurement.md) that drives interference and, ultimately, quantum speedups.
 
 ## The Hadamard Gate: Creating Superposition
 
@@ -142,7 +133,7 @@ Starting with a definite state |0⟩, the Hadamard gate creates an equal superpo
 **Before**: |0⟩ (definitely 0)
 **After**: (|0⟩ + |1⟩)/√2 (50% chance of 0, 50% chance of 1)
 
-This is the quantum equivalent of "flipping a fair coin" - but the qubit remains in superposition until measured.
+This is the quantum equivalent of "flipping a fair coin" — but the qubit remains in superposition until measured.
 
 ### The Hadamard Basis
 
@@ -186,7 +177,7 @@ S = [1 0]
 - S|0⟩ = |0⟩
 - S|1⟩ = i|1⟩
 
-**Effect**: Adds a 90° phase shift to the |1⟩ component
+**Effect**: Adds a 90° phase shift to the |1⟩ component.
 
 ### The T Gate (π/8 Gate)
 
@@ -200,7 +191,9 @@ T = [1    0   ]
 - T|0⟩ = |0⟩
 - T|1⟩ = e^(iπ/4)|1⟩
 
-**Effect**: Adds a 45° phase shift to the |1⟩ component
+**Effect**: Adds a 45° phase shift to the |1⟩ component.
+
+**A note on naming**: Despite being called the "π/8 gate," it actually applies a π/4 phase rotation. The name comes from factoring the matrix as e^(iπ/8) times a diagonal matrix — a historical convention that can be confusing.
 
 **Special importance**: The T gate is crucial for achieving **universal quantum computation**. While Hadamard and CNOT gates can create many useful operations, adding the T gate makes the gate set capable of approximating any quantum operation to arbitrary precision.
 
@@ -208,9 +201,9 @@ T = [1    0   ]
 
 The most general single-qubit gates are parametric rotations:
 
-**Rotation around X-axis**: Rx(θ) = cos(θ/2)I - i sin(θ/2)X
-**Rotation around Y-axis**: Ry(θ) = cos(θ/2)I - i sin(θ/2)Y  
-**Rotation around Z-axis**: Rz(θ) = cos(θ/2)I - i sin(θ/2)Z
+- **Rotation around X-axis**: Rx(θ) = cos(θ/2)I - i sin(θ/2)X
+- **Rotation around Y-axis**: Ry(θ) = cos(θ/2)I - i sin(θ/2)Y
+- **Rotation around Z-axis**: Rz(θ) = cos(θ/2)I - i sin(θ/2)Z
 
 These allow continuous control over qubit rotations, essential for implementing arbitrary quantum algorithms.
 
@@ -232,7 +225,7 @@ CNOT = [1 0 0 0]
 
 **Truth table**:
 - |00⟩ → |00⟩ (control=0, target unchanged)
-- |01⟩ → |01⟩ (control=0, target unchanged)  
+- |01⟩ → |01⟩ (control=0, target unchanged)
 - |10⟩ → |11⟩ (control=1, flip target)
 - |11⟩ → |10⟩ (control=1, flip target)
 
@@ -249,14 +242,14 @@ The CNOT gate's true power emerges when combined with superposition:
 2. Apply H to first qubit: (|0⟩ + |1⟩)|0⟩/√2 = (|00⟩ + |10⟩)/√2
 3. Apply CNOT: (|00⟩ + |11⟩)/√2
 
-The result is maximally entangled - measuring the first qubit instantly determines the second qubit's state, regardless of physical separation.
+The result is maximally entangled — measuring the first qubit instantly determines the second qubit's state, regardless of physical separation. We'll explore entanglement in detail in [Chapter 4](chapter-4-entanglement.md).
 
 ### Properties of CNOT
 
-**Reversibility**: CNOT is self-inverse (CNOT·CNOT = I)
-**Asymmetry**: Control and target qubits play different roles
-**Entangling**: Can create entanglement from product states
-**Classical behavior**: On computational basis states, behaves like classical controlled-NOT
+- **Reversibility**: CNOT is self-inverse (CNOT·CNOT = I)
+- **Asymmetry**: Control and target qubits play different roles
+- **Entangling**: Can create entanglement from product states
+- **Classical behavior**: On computational basis states, behaves like classical controlled-NOT
 
 ### Other Important Two-Qubit Gates
 
@@ -287,24 +280,21 @@ A **universal gate set** is a finite collection of gates that can approximate an
 - **Ry(θ)**: Arbitrary single-qubit rotations (parameterized)
 - **CNOT**: Two-qubit entangling gate
 
-**{All single-qubit gates, CNOT}**: Conceptually simple
-- Any single-qubit operation + entangling two-qubit gate
+### Why the T Gate is Special
 
-### Why T Gate is Special
+The T gate deserves special attention:
 
-The T gate deserves special attention because:
-
-**Transcendental**: Its matrix elements involve e^(iπ/4), an irrational number
-**Non-Clifford**: Unlike H and CNOT, T is not in the Clifford group
-**Magic**: Provides the "magic" needed to go beyond classical simulation
-**Fault-tolerance challenge**: Extremely difficult to implement fault-tolerantly
+- **Transcendental**: Its matrix elements involve e^(iπ/4), an irrational number
+- **Non-Clifford**: Unlike H and CNOT, T is not in the Clifford group
+- **"Magic"**: Provides the ingredient needed to go beyond efficient classical simulation
+- **Fault-tolerance challenge**: Extremely difficult to implement fault-tolerantly
 
 ### Gate Compilation
 
-Real quantum algorithms must be **compiled** from abstract operations into sequences of gates from the universal set. This process involves:
+Real quantum algorithms must be **compiled** from abstract operations into sequences of gates from the universal set:
 
 1. **Decomposition**: Breaking complex operations into simple gates
-2. **Approximation**: Using finite sequences to approximate arbitrary rotations  
+2. **Approximation**: Using finite sequences to approximate arbitrary rotations
 3. **Optimization**: Minimizing gate count and circuit depth
 4. **Hardware mapping**: Adapting to specific qubit connectivity constraints
 
@@ -314,11 +304,11 @@ Quantum circuits provide a visual and mathematical framework for describing quan
 
 ### Circuit Notation
 
-**Horizontal lines**: Represent individual qubits (time flows left to right)
-**Boxes**: Single-qubit gates
-**Connected symbols**: Multi-qubit gates (CNOT shown as ⊕ with control line)
-**Measurement**: Meter symbols
-**Classical bits**: Double lines (for storing measurement results)
+- **Horizontal lines**: Represent individual qubits (time flows left to right)
+- **Boxes**: Single-qubit gates
+- **Connected symbols**: Multi-qubit gates (CNOT shown as ⊕ with control line)
+- **Measurement**: Meter symbols
+- **Classical bits**: Double lines (for storing measurement results)
 
 ### Example: Bell State Circuit
 
@@ -335,18 +325,18 @@ This circuit:
 
 ### Circuit Properties
 
-**Acyclicity**: No feedback loops (quantum circuits are directed acyclic graphs)
-**Parallelism**: Gates on different qubits can execute simultaneously
-**Depth**: Maximum number of sequential gates (critical for decoherence)
-**Width**: Number of qubits required
+- **Acyclicity**: No feedback loops (quantum circuits are directed acyclic graphs)
+- **Parallelism**: Gates on different qubits can execute simultaneously
+- **Depth**: Maximum number of sequential gates (critical for decoherence)
+- **Width**: Number of qubits required
 
 ### Circuit Equivalence
 
 Many different circuits can implement the same quantum operation:
 
-**Gate identities**: H·X·H = Z (Hadamard conjugates X into Z)
-**Commutation**: Gates on different qubits commute
-**Cancellation**: Gate followed by inverse cancels out
+- **Gate identities**: H·X·H = Z (Hadamard conjugates X into Z)
+- **Commutation**: Gates on different qubits commute
+- **Cancellation**: Gate followed by inverse cancels out
 
 Circuit optimization uses these equivalences to minimize resource requirements.
 
@@ -362,7 +352,7 @@ Any single-qubit gate can be made into a controlled operation:
 ### Parametric Gates
 
 Many quantum gates accept continuous parameters:
-- **Rotation gates**: Rx(θ), Ry(θ), Rz(θ)  
+- **Rotation gates**: Rx(θ), Ry(θ), Rz(θ)
 - **Phase gates**: Rϕ(φ) = diag(1, e^(iφ))
 - **Applications**: Variational quantum algorithms, analog quantum simulation
 
@@ -376,8 +366,6 @@ Real quantum gates are imperfect:
 
 ## Quantum vs Classical Gates
 
-### Fundamental Differences
-
 | Property | Classical Gates | Quantum Gates |
 |----------|----------------|---------------|
 | **Reversibility** | Often irreversible | Always reversible |
@@ -386,48 +374,25 @@ Real quantum gates are imperfect:
 | **Measurement** | Non-destructive | Destructive |
 | **Parallelism** | Sequential processing | Quantum parallelism |
 
-### Computational Implications
-
-**Classical**: Computation is a sequence of irreversible logical operations
-**Quantum**: Computation is a sequence of reversible unitary transformations followed by measurement
-
-This difference enables quantum algorithms to explore multiple solution paths simultaneously and use interference to amplify correct answers.
-
 ## Chapter Summary
 
 Quantum gates provide the fundamental operations for quantum computation:
 
 1. **Single-qubit gates** manipulate individual qubits through rotations on the Bloch sphere
-2. **Pauli gates** (X, Y, Z) provide basic bit-flip and phase-flip operations  
+2. **Pauli gates** (X, Y, Z) provide basic bit-flip and phase-flip operations
 3. **Hadamard gate** creates superposition, enabling quantum parallelism
 4. **Two-qubit gates** like CNOT create entanglement between qubits
 5. **Universal gate sets** allow approximation of arbitrary quantum operations
 6. **Quantum circuits** provide a framework for composing gates into algorithms
 
-The reversible, unitary nature of quantum gates preserves quantum information while enabling complex manipulations of superposition and entanglement. These tools form the foundation for all quantum algorithms.
+The reversible, unitary nature of quantum gates preserves quantum information while enabling complex manipulations of superposition and entanglement.
 
-Understanding quantum gates is crucial because they bridge the gap between the abstract mathematical formalism of quantum mechanics and the practical implementation of quantum algorithms on real quantum devices.
+In the next chapter, we'll explore the quantum phenomenon that these gates create and that makes quantum computing truly powerful: **entanglement**.
 
-## Key Concepts
-
-- **Unitary operations**: Reversible transformations preserving quantum information
-- **Pauli gates**: X (bit-flip), Y (bit+phase flip), Z (phase-flip)
-- **Hadamard gate**: Creates equal superposition states
-- **CNOT gate**: Primary entangling two-qubit gate
-- **Universal gate set**: Finite collection of gates enabling arbitrary quantum computation
-- **Quantum circuit**: Visual representation of quantum algorithm as sequence of gates
-
-## Further Reading
-
-- Quantum gate implementations in different physical systems
-- Advanced gate compilation and optimization techniques
-- Fault-tolerant quantum gate constructions
-- Experimental demonstrations of quantum gate operations
-- Software tools for quantum circuit design and simulation
 ---
 
 ## References & Further Reading
 
 - **Qiskit Textbook** — Hands-on quantum gate tutorials with runnable code: [IBM Quantum Learning](https://learning.quantum.ibm.com/)
 - **Preskill's Caltech Lecture Notes (Ph219)** — Rigorous treatment of quantum gates and universality: [Caltech Ph219](http://theory.caltech.edu/~preskill/ph219/ph219_2023-24/)
-- **Nielsen & Chuang** companion resources — Standard reference for quantum circuit model (see Preskill's notes for open-access coverage)
+- **Nielsen & Chuang, "Quantum Computation and Quantum Information"** — Chapters 4–5 cover quantum circuits and universality in detail

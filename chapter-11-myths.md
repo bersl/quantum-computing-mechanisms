@@ -15,7 +15,7 @@ This chapter tackles the biggest myths head-on. Each one connects back to concep
 
 **The reality**: Superposition lets you *set up* all possible states simultaneously, but the moment you measure, you get **one random outcome**. If you just prepare a superposition of all answers and measure, you get a random answer — no better than guessing.
 
-The power of quantum computing doesn't come from trying everything at once. It comes from **interference** — the careful, algorithmic manipulation of probability amplitudes so that wrong answers cancel out and the right answer gets amplified (see [Chapter 1: Phase](chapter-1-qubits.md) and [Chapter 4: Algorithms](chapter-4-algorithms.md)).
+The power of quantum computing doesn't come from trying everything at once. It comes from **interference** — the careful, algorithmic manipulation of probability amplitudes so that wrong answers cancel out and the right answer gets amplified (see [Chapter 1: Phase](chapter-1-qubits.md) and [Chapter 5: Algorithms](chapter-5-algorithms.md)).
 
 This is why quantum algorithms are so hard to design. You can't just "throw superposition at the problem." You need to find mathematical structure in the problem that allows interference to work in your favor. Only a small class of problems have this structure.
 
@@ -48,7 +48,7 @@ Even in a mature quantum future, you'll use a classical computer for everyday ta
 
 **The myth**: Because measuring one entangled particle instantly affects its partner regardless of distance, entanglement can be used to send information faster than light.
 
-**Why people believe it**: The correlation *is* instantaneous. If Alice measures her entangled qubit and gets |0⟩, Bob's qubit *instantly* becomes |0⟩ too, even if they're on opposite sides of the galaxy. Einstein called this "spooky action at a distance" and it genuinely troubled him (see [Chapter 3: EPR Paradox](chapter-3-entanglement.md)).
+**Why people believe it**: The correlation *is* instantaneous. If Alice measures her entangled qubit and gets |0⟩, Bob's qubit *instantly* becomes |0⟩ too, even if they're on opposite sides of the galaxy. Einstein called this "spooky action at a distance" and it genuinely troubled him (see [Chapter 4: EPR Paradox](chapter-4-entanglement.md)).
 
 **The reality**: The correlation is real, but it carries **zero information**. Here's why:
 
@@ -68,14 +68,14 @@ From Bob's perspective, his measurement results look completely random. He can't
 
 **The myth**: Quantum computers will crack any encrypted message, making all digital security worthless.
 
-**Why people believe it**: Shor's algorithm (see [Chapter 4](chapter-4-algorithms.md)) can factor large numbers exponentially faster than classical computers, and RSA encryption relies on factoring being hard. Headlines extrapolate this to "all encryption is doomed."
+**Why people believe it**: Shor's algorithm (see [Chapter 5](chapter-5-algorithms.md)) can factor large numbers exponentially faster than classical computers, and RSA encryption relies on factoring being hard. Headlines extrapolate this to "all encryption is doomed."
 
 **The reality**: Shor's algorithm threatens **specific** encryption methods — those based on integer factoring (RSA) and discrete logarithms (Diffie-Hellman, elliptic curve). These are widely used today, so the threat is real and serious.
 
 But "all encryption" is a vast overstatement:
 - **Symmetric encryption** (AES-256) is barely affected. Grover's algorithm provides only a quadratic speedup, meaning AES-256 becomes roughly as hard as AES-128 — still practically unbreakable. Just double your key length.
 - **Hash functions** (SHA-256) face a similar quadratic speedup. Again, manageable by increasing output size.
-- **Post-quantum cryptography** is already here. NIST standardized quantum-resistant algorithms in 2022 (see [Chapter 8](chapter-8-road-ahead.md)) — lattice-based, hash-based, and code-based schemes that resist both classical and quantum attacks.
+- **Post-quantum cryptography** is already here. NIST standardized quantum-resistant algorithms in 2022 (see [Chapter 9](chapter-9-road-ahead.md)) — lattice-based, hash-based, and code-based schemes that resist both classical and quantum attacks.
 - **Quantum key distribution (QKD)** uses quantum mechanics itself to create provably secure keys.
 
 The real concern isn't that encryption will become impossible — it's the transition period. "Harvest now, decrypt later" attacks mean adversaries can store encrypted data today and decrypt it once quantum computers are powerful enough. This is why the migration to post-quantum cryptography is urgent even though large-scale quantum computers are years away.
@@ -112,7 +112,7 @@ The real concern isn't that encryption will become impossible — it's the trans
 
 **The reality**: Qubit count without context is almost meaningless. What matters is:
 
-- **Gate fidelity**: How accurate are the operations? A 56-qubit Quantinuum machine with 99.8% two-qubit fidelity can run deeper, more useful circuits than a 1,000-qubit machine with 99% fidelity (see [Chapter 6](chapter-6-hardware.md)).
+- **Gate fidelity**: How accurate are the operations? A 56-qubit Quantinuum machine with 99.8% two-qubit fidelity can run deeper, more useful circuits than a 1,000-qubit machine with 99% fidelity (see [Chapter 7](chapter-7-hardware.md)).
 - **Connectivity**: Can any qubit talk to any other? Or only neighbors? Limited connectivity means wasting gates on SWAP operations.
 - **Coherence time**: How long before decoherence destroys the quantum state? More time = more gates = deeper circuits.
 - **Circuit depth**: The real limit on what you can compute. Depth = how many sequential operations before errors overwhelm the result.
@@ -187,7 +187,7 @@ That's 1,000–10,000x more qubits than exist today, each needing to be signific
 
 No consciousness is required. A rock can "measure" a quantum system just as effectively as a physicist. The key requirement is an **irreversible interaction** that entangles the quantum system with a macroscopic environment, creating a record that distinguishes between possible outcomes.
 
-This is why decoherence is such a problem for quantum computers (see [Chapter 5](chapter-5-error-correction.md)) — the environment is constantly "measuring" the qubits through thermal noise, electromagnetic interference, and material vibrations. No conscious observer needed.
+This is why decoherence is such a problem for quantum computers (see [Chapter 6](chapter-6-error-correction.md)) — the environment is constantly "measuring" the qubits through thermal noise, electromagnetic interference, and material vibrations. No conscious observer needed.
 
 **The correct mental model**: "Measurement" in quantum mechanics means "interaction with the environment," not "observation by a mind." Decoherence is measurement by the environment, happening continuously.
 
